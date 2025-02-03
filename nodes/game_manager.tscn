@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ugrknvkg5gq"]
+
+[ext_resource type="Script" path="res://nodes/gameManager.gd" id="1_ack48"]
+[ext_resource type="PackedScene" uid="uid://tgj36s73noo6" path="res://nodes/mainMenu.tscn" id="2_ufdgk"]
+
+[node name="gameManager" type="Node"]
+script = ExtResource("1_ack48")
+
+[node name="venv" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="venv"]
+position = Vector2(240, 135)
+
+[node name="sfxPlayer" type="AudioStreamPlayer" parent="venv"]
+
+[node name="musicPlayer" type="AudioStreamPlayer" parent="venv"]
+
+[node name="loadedScene" type="Node2D" parent="."]
+
+[node name="mainMenu" parent="loadedScene" instance=ExtResource("2_ufdgk")]
