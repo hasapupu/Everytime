@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://tgj36s73noo6"]
+[gd_scene load_steps=5 format=3 uid="uid://tgj36s73noo6"]
 
 [ext_resource type="FontFile" uid="uid://c27mtehalfbm3" path="res://fonts/MARYJO__.ttf" id="1_pbu5d"]
-[ext_resource type="Script" path="res://scripts/mmButton.gd" id="2_lxg81"]
+[ext_resource type="Script" path="res://nodes/startButton.gd" id="2_xm2qp"]
+[ext_resource type="Script" path="res://nodes/quit.gd" id="3_swqv5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2t13"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -36,7 +37,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_o2t13")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o2t13")
 text = "EVERYTIME"
 alignment = 0
-script = ExtResource("2_lxg81")
+script = ExtResource("2_xm2qp")
 
 [node name="quit" type="Button" parent="."]
 layout_mode = 0
@@ -54,10 +55,11 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_o2t13")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o2t13")
 text = "Quit"
 alignment = 0
-script = ExtResource("2_lxg81")
+script = ExtResource("3_swqv5")
 
 [connection signal="button_down" from="start" to="start" method="_on_button_down"]
 [connection signal="mouse_entered" from="start" to="start" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="start" to="start" method="_on_mouse_exited"]
+[connection signal="button_down" from="quit" to="quit" method="_on_button_down"]
 [connection signal="mouse_entered" from="quit" to="quit" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="quit" to="quit" method="_on_mouse_exited"]
