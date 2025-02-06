@@ -1,13 +1,17 @@
 class_name mmButton extends Button
 
-var responseTexts := []
+var responseTexts := {}
 var finished := false
 var ogText := ""
 var shouldLoop := false
 var myFont: FontFile
 var voice: AudioStream
+@onready var papa: daddyMaster = get_tree().root.get_node("gameManager")
+
 
 func _on_mouse_entered():
+	if papa.playerButtonWriting == true:
+		await papa.playerButtonStoppedWriting
 	if shouldLoop == false:
 		ogText = text
 		shouldLoop = true
@@ -23,16 +27,25 @@ func hoverLoop():
 		hoverLoop()
 
 func _on_mouse_exited():
+	if papa.playerButtonWriting == true:
+		await papa.playerButtonStoppedWriting
 	shouldLoop = false
 	text = ogText
 
 func _on_button_down():
-	shouldLoop = false
-	if responseTexts.size() > 0:
-		var _writer = writer.new()
-		await _writer.writeTo(self,responseTexts,voice,0.07,myFont,get_tree().root.get_node("gameManager"))
-		await _writer.finished
-	overrideAbleFunction()
+	if papa.playerButtonWriting == false:
+		papa.playerButtonStoppedWriting.connect(_on_player_stopped_writing)
+		papa.playerButtonWriting = true
+		shouldLoop = false
+		if responseTexts.keys().size() > 0:
+			var _writer = writer.new()
+			_writer.finished.connect(_writing_stopped)
+			await _writer.writeTo(self,responseTexts,voice,0.07,myFont,papa)
+			
 
-func overrideAbleFunction():
-	pass
+func _on_player_stopped_writing():
+	print("not overwritten")
+
+func _writing_stopped():
+	papa.sendPlayerWritingStoppedSignal()
+	papa.playerButtonWriting = false

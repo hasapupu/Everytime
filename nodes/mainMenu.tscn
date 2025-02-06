@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://tgj36s73noo6"]
+[gd_scene load_steps=9 format=3 uid="uid://tgj36s73noo6"]
 
 [ext_resource type="FontFile" uid="uid://c27mtehalfbm3" path="res://fonts/MARYJO__.ttf" id="1_pbu5d"]
 [ext_resource type="Script" path="res://nodes/startButton.gd" id="2_xm2qp"]
@@ -6,6 +6,22 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2t13"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Gradient" id="Gradient_oewj8"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iamkd"]
+gradient = SubResource("Gradient_oewj8")
+width = 20
+height = 20
+
+[sub_resource type="Curve" id="Curve_nsiso"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.340659), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_bl8e5"]
+offsets = PackedFloat32Array(0.02, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
@@ -22,6 +38,7 @@ offset_bottom = 270.0
 color = Color(0, 0, 0, 1)
 
 [node name="start" type="Button" parent="."]
+z_index = 5
 layout_mode = 0
 offset_left = 28.0
 offset_top = 55.0
@@ -40,10 +57,10 @@ alignment = 0
 script = ExtResource("2_xm2qp")
 
 [node name="quit" type="Button" parent="."]
+z_index = 5
 layout_mode = 0
-offset_left = 206.0
 offset_top = 200.0
-offset_right = 280.0
+offset_right = 479.0
 offset_bottom = 240.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_pbu5d")
@@ -53,9 +70,88 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_o2t13")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_o2t13")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_o2t13")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o2t13")
-text = "Quit"
+text = "                 Quit"
 alignment = 0
 script = ExtResource("3_swqv5")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node"]
+rotation = 0.760964
+amount = 6
+texture = SubResource("GradientTexture2D_iamkd")
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_align_y = true
+spread = 43.64
+gravity = Vector2(0, 0)
+initial_velocity_min = 80.81
+initial_velocity_max = 232.01
+radial_accel_max = 0.95
+scale_amount_min = 0.2
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_nsiso")
+color_initial_ramp = SubResource("Gradient_bl8e5")
+anim_speed_max = 16.81
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Node"]
+position = Vector2(1, 269)
+rotation = -0.825541
+amount = 6
+texture = SubResource("GradientTexture2D_iamkd")
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_align_y = true
+spread = 43.64
+gravity = Vector2(0, 0)
+initial_velocity_min = 80.81
+initial_velocity_max = 232.01
+radial_accel_max = 0.95
+scale_amount_min = 0.2
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_nsiso")
+color_initial_ramp = SubResource("Gradient_bl8e5")
+anim_speed_max = 16.81
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Node"]
+position = Vector2(479, 270)
+rotation = -2.38063
+scale = Vector2(1, -1)
+amount = 6
+texture = SubResource("GradientTexture2D_iamkd")
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_align_y = true
+spread = 43.64
+gravity = Vector2(0, 0)
+initial_velocity_min = 80.81
+initial_velocity_max = 232.01
+radial_accel_max = 0.95
+scale_amount_min = 0.2
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_nsiso")
+color_initial_ramp = SubResource("Gradient_bl8e5")
+anim_speed_max = 16.81
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="Node"]
+position = Vector2(474, 2.00003)
+rotation = 2.31605
+scale = Vector2(1, -1)
+amount = 6
+texture = SubResource("GradientTexture2D_iamkd")
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_align_y = true
+spread = 43.64
+gravity = Vector2(0, 0)
+initial_velocity_min = 80.81
+initial_velocity_max = 232.01
+radial_accel_max = 0.95
+scale_amount_min = 0.2
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_nsiso")
+color_initial_ramp = SubResource("Gradient_bl8e5")
+anim_speed_max = 16.81
 
 [connection signal="button_down" from="start" to="start" method="_on_button_down"]
 [connection signal="mouse_entered" from="start" to="start" method="_on_mouse_entered"]
