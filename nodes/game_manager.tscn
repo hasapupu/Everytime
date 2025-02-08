@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://7ugrknvkg5gq"]
+[gd_scene load_steps=5 format=3 uid="uid://7ugrknvkg5gq"]
 
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_ack48"]
 [ext_resource type="PackedScene" uid="uid://tgj36s73noo6" path="res://nodes/mainMenu.tscn" id="2_ufdgk"]
+[ext_resource type="Shader" path="res://scripts/crt.gdshader" id="3_nihmw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_arjyp"]
+shader = ExtResource("3_nihmw")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.1
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
 
 [node name="gameManager" type="Node"]
 script = ExtResource("1_ack48")
@@ -18,3 +36,13 @@ position = Vector2(240, 135)
 [node name="loadedScene" type="Node2D" parent="."]
 
 [node name="mainMenu" parent="loadedScene" instance=ExtResource("2_ufdgk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_arjyp")
+offset_left = 1.0
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2

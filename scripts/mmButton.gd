@@ -34,6 +34,7 @@ func _on_mouse_exited():
 
 func _on_button_down():
 	if papa.playerButtonWriting == false:
+		pressedImmediately()
 		papa.playerButtonStoppedWriting.connect(_on_player_stopped_writing)
 		papa.playerButtonWriting = true
 		shouldLoop = false
@@ -49,3 +50,6 @@ func _on_player_stopped_writing():
 func _writing_stopped():
 	papa.sendPlayerWritingStoppedSignal()
 	papa.playerButtonWriting = false
+
+func pressedImmediately():
+	pass
