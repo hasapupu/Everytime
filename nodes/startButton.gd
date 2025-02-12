@@ -16,3 +16,6 @@ func pressedImmediately():
 	for i in psParent.get_children():
 		get_tree().create_tween().tween_property(i,"speed_scale",8,tweenLength + 3)
 	get_tree().create_tween().tween_property(fadeRect,"color:a",1,tweenLength + 3)
+
+func _on_player_stopped_writing():
+	papa.startMainLoop()
