@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://7ugrknvkg5gq"]
+[gd_scene load_steps=6 format=3 uid="uid://7ugrknvkg5gq"]
 
 [ext_resource type="Script" path="res://scripts/gameManager.gd" id="1_ack48"]
 [ext_resource type="PackedScene" uid="uid://tgj36s73noo6" path="res://nodes/mainMenu.tscn" id="2_ufdgk"]
 [ext_resource type="Shader" path="res://scripts/crt.gdshader" id="3_nihmw"]
+[ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="4_cnx5q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_arjyp"]
 shader = ExtResource("3_nihmw")
@@ -50,5 +51,7 @@ mouse_filter = 2
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="clock" parent="." instance=ExtResource("4_cnx5q")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

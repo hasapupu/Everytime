@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba0ntjjwvl81n"]
+[gd_scene load_steps=6 format=3 uid="uid://ba0ntjjwvl81n"]
 
 [ext_resource type="Texture2D" uid="uid://b1njlmmuubhbk" path="res://backgrounds/yDefault1.png" id="1_tqoxb"]
 [ext_resource type="Script" path="res://scripts/backGroundSprite.gd" id="2_pyap5"]
 [ext_resource type="Texture2D" uid="uid://dpuje5ux4457p" path="res://backgrounds/yDefault2.png" id="3_g7ldn"]
+[ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="4_23m65"]
+[ext_resource type="Script" path="res://nodes/hubEvents.gd" id="5_3ulhn"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(240, 135)
@@ -10,3 +12,9 @@ texture = ExtResource("1_tqoxb")
 script = ExtResource("2_pyap5")
 tOne = ExtResource("1_tqoxb")
 tTwo = ExtResource("3_g7ldn")
+unitName = "hubScene"
+
+[node name="clock" parent="." instance=ExtResource("4_23m65")]
+
+[node name="events" type="Node" parent="."]
+script = ExtResource("5_3ulhn")

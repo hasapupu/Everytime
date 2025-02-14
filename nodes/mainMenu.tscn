@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://tgj36s73noo6"]
 
 [ext_resource type="FontFile" uid="uid://c27mtehalfbm3" path="res://fonts/MARYJO__.ttf" id="1_pbu5d"]
-[ext_resource type="Script" path="res://nodes/startButton.gd" id="2_xm2qp"]
-[ext_resource type="Script" path="res://nodes/quit.gd" id="3_swqv5"]
+[ext_resource type="Script" path="res://scripts/startButton.gd" id="2_xm2qp"]
+[ext_resource type="Script" path="res://scripts/quit.gd" id="3_rxyho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2t13"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -73,7 +73,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_o2t13")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o2t13")
 text = "                 Quit"
 alignment = 0
-script = ExtResource("3_swqv5")
+script = ExtResource("3_rxyho")
 
 [node name="Node" type="Node" parent="."]
 
@@ -156,9 +156,9 @@ anim_speed_max = 16.81
 
 [node name="fade" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -12.0
+offset_left = 1.0
 offset_top = -22.0
-offset_right = 513.0
+offset_right = 480.0
 offset_bottom = 296.0
 color = Color(1, 1, 1, 0)
 
