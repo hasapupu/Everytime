@@ -11,6 +11,7 @@ var isChanged := false
 func _ready():
 	papito = get_tree().root.get_node("gameManager")
 	papito.squiggle.connect(_change_sprite)
+	papito.currentRoomName = unitName 
 	if papito.eventIndexes.has(unitName) == false:
 		papito.eventIndexes[unitName] = 0
 	myTime.tick.connect(checkForEvent)
@@ -32,4 +33,6 @@ func checkForEvent(currentTime):
 			if myEvents.contents[papito.eventIndexes[unitName]].replacingSprites.size() > 0:
 				tOne = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[0]
 				tTwo = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[1]
+			if myEvents.contents[papito.eventIndexes[unitName]].buttonAddPath != "":
+				papito.addButton(myEvents.contents[papito.eventIndexes[unitName]].buttonAddPath)
 			papito.eventIndexes[unitName] += 1

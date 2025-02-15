@@ -43,7 +43,6 @@ layer = 0
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_arjyp")
-offset_left = 1.0
 offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2

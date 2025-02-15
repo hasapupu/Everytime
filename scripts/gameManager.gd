@@ -12,6 +12,8 @@ var plUINode: Node2D
 @onready var mainTime: clockCustom = get_node("clock")
 var events := []
 var eventIndexes = {}
+var currentRoomName := ""
+var buttons := []
 
 func playSfx(sfx: AudioStream):
 	sfxManager.stream_paused = false
@@ -38,7 +40,8 @@ func startMainLoop():
 	loadedScene.add_child(loadedSceneNoEnv)
 	loadScene("res://nodes/yScene.tscn")
 	await get_tree().create_timer(1).timeout
-	_print({"You're back?": 0.7,"What, was staring into the white void so boring you'd rather talk to me instead?": 0.7,"To be honest, I can't relate.": 1},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"))
+	_print({"You're back?": 0.7,"What, was staring into the white void so boring you'd rather talk to me instead?": 0.7,"Can't relate.": 1},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"))
+	addButton("res://nodes/hubButton.tscn")
 
 func _on_timer_timeout():
 	squiggle.emit()
@@ -56,3 +59,7 @@ func finishPrinting():
 	mainTextbox.get_parent().visible = false
 
 #func checkForEvent
+func addButton(path: String):
+	var tempB = load(path).instantiate()
+	plUINode.get_children()[buttons.size()].add_child(tempB)
+	buttons.append(tempB)

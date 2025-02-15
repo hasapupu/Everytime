@@ -20,3 +20,18 @@ theme_override_fonts/normal_font = ExtResource("1_cxcft")
 bbcode_enabled = true
 
 [node name="stageSelectNode" type="Node2D" parent="backGround"]
+
+[node name="Sprite2D" type="Node2D" parent="backGround/stageSelectNode"]
+position = Vector2(48, 41)
+
+[node name="Sprite2D2" type="Node2D" parent="backGround/stageSelectNode"]
+position = Vector2(145, 41)
+
+[node name="Sprite2D3" type="Node2D" parent="backGround/stageSelectNode"]
+position = Vector2(242, 41)
+
+[node name="Sprite2D4" type="Node2D" parent="backGround/stageSelectNode"]
+position = Vector2(337, 41)
+
+[node name="Sprite2D5" type="Node2D" parent="backGround/stageSelectNode"]
+position = Vector2(432, 41)

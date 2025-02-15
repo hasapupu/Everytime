@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2fuvds4mky32"]
+
+[ext_resource type="Texture2D" uid="uid://36oh78i677x2" path="res://backgrounds/whiteDimension.png" id="1_jwx8f"]
+[ext_resource type="Script" path="res://scripts/backGroundSprite.gd" id="2_4tf00"]
+[ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="3_heim7"]
+[ext_resource type="Script" path="res://scripts/events.gd" id="4_7lysq"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(240, 135)
+texture = ExtResource("1_jwx8f")
+script = ExtResource("2_4tf00")
+tOne = ExtResource("1_jwx8f")
+tTwo = ExtResource("1_jwx8f")
+unitName = "planetView"
+
+[node name="clock" parent="." instance=ExtResource("3_heim7")]
+
+[node name="events" type="Node" parent="."]
+script = ExtResource("4_7lysq")
