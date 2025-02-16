@@ -41,7 +41,7 @@ func _on_button_down():
 		if responseTexts.keys().size() > 0:
 			var _writer = writer.new()
 			_writer.finished.connect(_writing_stopped)
-			await _writer.writeTo(self,responseTexts,voice,0.07,myFont,papa)
+			await _writer.writeTo(self,responseTexts,voice,0.09,myFont,papa)
 			
 
 func _on_player_stopped_writing():

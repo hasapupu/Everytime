@@ -30,6 +30,7 @@ func checkForEvent(currentTime):
 			if myEvents.contents[papito.eventIndexes[unitName]].dialogueText.keys().size() > 0:
 				var painTemp = myEvents.contents[papito.eventIndexes[unitName]] as event
 				papito._print(painTemp.dialogueText,painTemp.dialogueVoice,painTemp.dialogueDelay,painTemp.dialogueFont)
+				await papito.stoppedPrinting
 			if myEvents.contents[papito.eventIndexes[unitName]].replacingSprites.size() > 0:
 				tOne = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[0]
 				tTwo = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[1]

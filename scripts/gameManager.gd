@@ -14,6 +14,7 @@ var events := []
 var eventIndexes = {}
 var currentRoomName := ""
 var buttons := []
+signal stoppedPrinting
 
 func playSfx(sfx: AudioStream):
 	sfxManager.stream_paused = false
@@ -40,7 +41,8 @@ func startMainLoop():
 	loadedScene.add_child(loadedSceneNoEnv)
 	loadScene("res://nodes/yScene.tscn")
 	await get_tree().create_timer(1).timeout
-	_print({"You're back?": 0.7,"What, was staring into the white void so boring you'd rather talk to me instead?": 0.7,"Can't relate.": 1},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"))
+	_print({"You're back?": 0.7,"What, was staring into the white void alone so boring you'd rather do it with me instead?": 0.7,"Can't relate.": 1},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"))
+	await get_tree().create_timer(0.5).timeout
 	addButton("res://nodes/hubButton.tscn")
 
 func _on_timer_timeout():
@@ -57,6 +59,7 @@ func finishPrinting():
 	plUINode.visible = true
 	mainTextbox.text = ""
 	mainTextbox.get_parent().visible = false
+	stoppedPrinting.emit()
 
 #func checkForEvent
 func addButton(path: String):
