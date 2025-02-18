@@ -7,3 +7,7 @@ extends Button
 func _on_button_down():
     if papa.currentRoomName != uName:
         papa.loadScene(scenePath)
+
+func _process(delta):
+    if papa.sceneSprites.has(uName):
+        get_parent().texture = papa.sceneSprites[uName][0]

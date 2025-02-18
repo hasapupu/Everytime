@@ -15,6 +15,8 @@ var eventIndexes = {}
 var currentRoomName := ""
 var buttons := []
 signal stoppedPrinting
+var sceneSprites := {}
+var textReplacementBuffer := {}
 
 func playSfx(sfx: AudioStream):
 	sfxManager.stream_paused = false
@@ -28,6 +30,7 @@ func loadScene(path: String):
 	for i in loadedSceneNoEnv.get_children():
 		i.queue_free()
 	var tempS = load(path).instantiate()
+	tempS.myPS = load(path)
 	loadedSceneNoEnv.add_child(tempS)
 
 func startMainLoop():
@@ -41,7 +44,7 @@ func startMainLoop():
 	loadedScene.add_child(loadedSceneNoEnv)
 	loadScene("res://nodes/yScene.tscn")
 	await get_tree().create_timer(1).timeout
-	_print({"You're back?": 0.7,"What, was staring into the white void alone so boring you'd rather do it with me instead?": 0.7,"Can't relate.": 1},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"))
+	_print({"You're back?": 0.7,"What, was staring into the white void alone so boring you'd rather join me instead?": 0.7,"Can't relate.": 1},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"))
 	await get_tree().create_timer(0.5).timeout
 	addButton("res://nodes/hubButton.tscn")
 

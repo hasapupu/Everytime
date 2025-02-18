@@ -7,13 +7,23 @@ var isChanged := false
 @onready var myTime: clockCustom = get_node("clock")
 @onready var myEvents : events = get_node("events")
 @onready var papito: daddyMaster
+var myPS: PackedScene
 
 func _ready():
 	papito = get_tree().root.get_node("gameManager")
 	papito.squiggle.connect(_change_sprite)
 	papito.currentRoomName = unitName 
+	if papito.textReplacementBuffer.has(unitName):
+		myEvents.contents = papito.textReplacementBuffer[unitName]
+		papito.eventIndexes.erase(unitName)
+		papito.textReplacementBuffer.erase(unitName)
 	if papito.eventIndexes.has(unitName) == false:
 		papito.eventIndexes[unitName] = 0
+	if papito.sceneSprites.has(unitName) == false:
+		papito.sceneSprites[unitName] = [tOne,tTwo]
+	texture = papito.sceneSprites[unitName][0]
+	tOne = papito.sceneSprites[unitName][0]
+	tTwo = papito.sceneSprites[unitName][1]
 	myTime.tick.connect(checkForEvent)
 
 func _change_sprite():
@@ -34,6 +44,9 @@ func checkForEvent(currentTime):
 			if myEvents.contents[papito.eventIndexes[unitName]].replacingSprites.size() > 0:
 				tOne = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[0]
 				tTwo = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[1]
+				papito.sceneSprites[unitName] = [tOne,tTwo]
 			if myEvents.contents[papito.eventIndexes[unitName]].buttonAddPath != "":
 				papito.addButton(myEvents.contents[papito.eventIndexes[unitName]].buttonAddPath)
+			if myEvents.contents[papito.eventIndexes[unitName]].dictKey != "":
+				papito.textReplacementBuffer[myEvents.contents[papito.eventIndexes[unitName]].dictKey] = myEvents.contents[papito.eventIndexes[unitName]].dictArr
 			papito.eventIndexes[unitName] += 1
