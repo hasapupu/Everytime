@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://mp7jpgqi48ts"]
+
+[ext_resource type="Texture2D" uid="uid://bf6y3hxy5w3yu" path="res://backgrounds/desert1.png" id="1_74f5m"]
+[ext_resource type="Script" path="res://scripts/backGroundSprite.gd" id="2_5wpb0"]
+[ext_resource type="Texture2D" uid="uid://hdgl703cnl5a" path="res://backgrounds/desert2.png" id="3_0jr3h"]
+[ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="3_4064m"]
+[ext_resource type="Script" path="res://nodes/desertEvents.gd" id="5_abjxy"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(240, 135)
+texture = ExtResource("1_74f5m")
+script = ExtResource("2_5wpb0")
+tOne = ExtResource("1_74f5m")
+tTwo = ExtResource("3_0jr3h")
+unitName = "egyptScene"
+
+[node name="clock" parent="." instance=ExtResource("3_4064m")]
+
+[node name="events" type="Node" parent="."]
+script = ExtResource("5_abjxy")

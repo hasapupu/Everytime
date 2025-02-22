@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://5ibpsfn04xdk"]
+
+[ext_resource type="Texture2D" uid="uid://dkf5nsvgrni7n" path="res://backgrounds/islands1.png" id="1_eyoiu"]
+[ext_resource type="FontFile" uid="uid://rlcvbpqcdfbm" path="res://fonts/MARYJCA_.ttf" id="2_gulwc"]
+[ext_resource type="Script" path="res://nodes/stageSelectUI.gd" id="3_xj5bp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v60kl"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovlw2"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_eyoiu")
+
+[node name="Button2" type="Button" parent="."]
+show_behind_parent = true
+offset_left = -240.0
+offset_top = 55.0
+offset_right = 240.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_gulwc")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_v60kl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ovlw2")
+script = ExtResource("3_xj5bp")
+uName = "islandScene"
+scenePath = "res://nodes/islandScene.tscn"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]

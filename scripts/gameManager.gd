@@ -2,6 +2,7 @@ class_name daddyMaster extends Node
 
 signal playerButtonStoppedWriting
 @onready var sfxManager: AudioStreamPlayer = get_node("venv/sfxPlayer")
+@onready var musicManager: AudioStreamPlayer = get_node("venv/musicPlayer")
 var playerButtonWriting := false
 @onready var playerUI: PackedScene = preload("res://nodes/sceneEnv.tscn")
 @onready var loadedScene = get_node("loadedScene")
@@ -17,11 +18,20 @@ var buttons := []
 signal stoppedPrinting
 var sceneSprites := {}
 var textReplacementBuffer := {}
+@onready var introMusic: AudioStream = preload("res://music/everytime title.wav")
+
+func _ready():
+	playMusic(introMusic)
 
 func playSfx(sfx: AudioStream):
 	sfxManager.stream_paused = false
 	sfxManager.stream = sfx
 	sfxManager.playing = true
+
+func playMusic(music: AudioStream):
+	musicManager.stream_paused = false
+	musicManager.stream = music
+	musicManager.playing = true
 
 func sendPlayerWritingStoppedSignal():
 	playerButtonStoppedWriting.emit()
