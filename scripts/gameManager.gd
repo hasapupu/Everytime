@@ -18,7 +18,10 @@ var buttons := []
 signal stoppedPrinting
 var sceneSprites := {}
 var textReplacementBuffer := {}
-@onready var introMusic: AudioStream = preload("res://music/everytime title.wav")
+@onready var introMusic: AudioStream = preload("res://music/on the verge.wav")
+@onready var mainMusic: AudioStream = preload("res://music/stuck.wav")
+@onready var gameFxPlayer: AudioStreamPlayer = get_node("venv/gameFxPlayer")
+@onready var droneNoise: AudioStream = preload("res://sfx/loadin.wav")
 
 func _ready():
 	playMusic(introMusic)
@@ -27,6 +30,11 @@ func playSfx(sfx: AudioStream):
 	sfxManager.stream_paused = false
 	sfxManager.stream = sfx
 	sfxManager.playing = true
+
+func playGfx(sfx: AudioStream):
+	gameFxPlayer.stream_paused = false
+	gameFxPlayer.stream = sfx
+	gameFxPlayer.playing = true
 
 func playMusic(music: AudioStream):
 	musicManager.stream_paused = false
@@ -53,6 +61,8 @@ func startMainLoop():
 	loadedSceneNoEnv = Node2D.new()
 	loadedScene.add_child(loadedSceneNoEnv)
 	loadScene("res://nodes/yScene.tscn")
+	gameFxPlayer.stream_paused = true
+	playMusic(mainMusic)
 	await get_tree().create_timer(1).timeout
 	_print({"You're back?": 0.7,"What, was staring into the white void alone so boring you'd rather join me instead?": 0.7,"Can't relate.": 1},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"))
 	await get_tree().create_timer(0.5).timeout

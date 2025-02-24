@@ -4,6 +4,7 @@ var time := 0
 signal tick(currentTime)
 
 func _ready():
+    tick.emit(0)
     calcUp()
 
 func calcUp():
