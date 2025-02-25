@@ -12,7 +12,7 @@ signal squiggle
 var plUINode: Node2D
 @onready var mainTime: clockCustom = get_node("clock")
 var events := []
-var eventIndexes = {}
+var eventIndexes = {"main":0}
 var currentRoomName := ""
 var buttons := []
 signal stoppedPrinting
@@ -22,8 +22,10 @@ var textReplacementBuffer := {}
 @onready var mainMusic: AudioStream = preload("res://music/stuck.wav")
 @onready var gameFxPlayer: AudioStreamPlayer = get_node("venv/gameFxPlayer")
 @onready var droneNoise: AudioStream = preload("res://sfx/loadin.wav")
+@onready var mainEvents: events = get_node("events")
 
 func _ready():
+	mainTime.tick.connect(checkForEvent)
 	playMusic(introMusic)
 
 func playSfx(sfx: AudioStream):
@@ -89,3 +91,23 @@ func addButton(path: String):
 	var tempB = load(path).instantiate()
 	plUINode.get_children()[buttons.size()].add_child(tempB)
 	buttons.append(tempB)
+
+func checkForEvent(currentTime):
+	if eventIndexes["main"] < mainEvents.contents.size():
+		if mainEvents.contents[eventIndexes["main"]].time == currentTime:
+			if mainEvents.contents[eventIndexes["main"]].dialogueText.keys().size() > 0:
+				var painTemp = mainEvents.contents[eventIndexes["main"]] as event
+				_print(painTemp.dialogueText,painTemp.dialogueVoice,painTemp.dialogueDelay,painTemp.dialogueFont)
+				await stoppedPrinting
+			if mainEvents.contents[eventIndexes["main"]].buttonAddPath != "":
+				addButton(mainEvents.contents[eventIndexes["main"]].buttonAddPath)
+			if mainEvents.contents[eventIndexes["main"]].dictKey != "":
+				textReplacementBuffer[mainEvents.contents[eventIndexes["main"]].dictKey] = mainEvents.contents[eventIndexes["main"]].dictArr
+			eventIndexes["main"] += 1
+
+func _process(delta):
+	if textReplacementBuffer.has("main"):
+		mainEvents.contents = textReplacementBuffer["main"]
+		eventIndexes["main"] = 0
+		textReplacementBuffer.erase("main")
+		mainTime.reset()

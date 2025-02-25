@@ -12,3 +12,6 @@ func calcUp():
     time += 1
     tick.emit(time)
     calcUp()
+
+func reset():
+    time = -1
