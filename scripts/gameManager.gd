@@ -95,15 +95,20 @@ func addButton(path: String):
 func checkForEvent(currentTime):
 	if eventIndexes["main"] < mainEvents.contents.size():
 		if mainEvents.contents[eventIndexes["main"]].time == currentTime:
-			if mainEvents.contents[eventIndexes["main"]].dialogueText.keys().size() > 0:
-				var painTemp = mainEvents.contents[eventIndexes["main"]] as event
-				_print(painTemp.dialogueText,painTemp.dialogueVoice,painTemp.dialogueDelay,painTemp.dialogueFont)
-				await stoppedPrinting
-			if mainEvents.contents[eventIndexes["main"]].buttonAddPath != "":
-				addButton(mainEvents.contents[eventIndexes["main"]].buttonAddPath)
-			if mainEvents.contents[eventIndexes["main"]].dictKey != "":
-				textReplacementBuffer[mainEvents.contents[eventIndexes["main"]].dictKey] = mainEvents.contents[eventIndexes["main"]].dictArr
+			executeEventFunctions(mainEvents.contents[eventIndexes["main"]])
 			eventIndexes["main"] += 1
+
+func executeEventFunctions(inp:event):
+	if inp.dialogueText.keys().size() > 0:
+		var painTemp = inp as event
+		_print(painTemp.dialogueText,painTemp.dialogueVoice,painTemp.dialogueDelay,painTemp.dialogueFont)
+		await stoppedPrinting
+	if inp.buttonAddPath != "":
+		addButton(inp.buttonAddPath)
+	if inp.dictKey != "":
+		textReplacementBuffer[inp.dictKey] = inp.dictArr
+	if inp.recursiveEvent != null:
+		executeEventFunctions(inp.recursiveEvent)
 
 func _process(delta):
 	if textReplacementBuffer.has("main"):

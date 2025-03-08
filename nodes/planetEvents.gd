@@ -8,5 +8,13 @@ func _ready():
             event.new(40,{"STOP LOOKING AT ME LIKE THAT!":1},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/ySquirm1.png"),load("res://backgrounds/ySquirm2.png")],""),
             event.new(60,{"FINE!":1,"I'LL MAKE YOU SOME NEW 'TOYS'!":1,"AND I'LL EVEN MAKE THEM LAST FOR A LOOOOOOOOONG TIME!":1,"JUST LET ME BE!":2},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yDepression1.png"),load("res://backgrounds/yDepression2.png")],"","planetView",[
                 event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/planetBG1.png"),load("res://backgrounds/planetBG2.png")],"res://nodes/arcticButton.tscn","main",[
-                    event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[],"" )
+                    event.new(40,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[],"","monkScene",[
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/arcticFewPeople1.png"),load("res://backgrounds/arcticFewPeople2.png")],"")
+                    ]),
+                    event.new(60,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[],"","egyptScene",[
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertFewPeople1.png"),load("res://backgrounds/desertFewPeople2.png")],"")
+                    ]),
+                    event.new(70,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[],"","islandScene",[
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandFewPeople1.png"),load("res://backgrounds/islandFewPeople2.png")],"")
+                    ]),
                 ])])])]

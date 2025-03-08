@@ -21,6 +21,7 @@ func _ready():
 		papito.eventIndexes[unitName] = 0
 	if papito.sceneSprites.has(unitName) == false:
 		papito.sceneSprites[unitName] = [tOne,tTwo]
+	checkForEvent(0)
 	texture = papito.sceneSprites[unitName][0]
 	tOne = papito.sceneSprites[unitName][0]
 	tTwo = papito.sceneSprites[unitName][1]
@@ -34,19 +35,26 @@ func _change_sprite():
 	
 	isChanged = !isChanged
 
+func executeEvenctFunctions(inp: event):
+	if inp.dialogueText.keys().size() > 0:
+		var painTemp = inp as event
+		papito._print(painTemp.dialogueText,painTemp.dialogueVoice,painTemp.dialogueDelay,painTemp.dialogueFont)
+		await papito.stoppedPrinting
+	if inp.replacingSprites.size() > 0:
+		tOne = inp.replacingSprites[0]
+		tTwo = inp.replacingSprites[1]
+		papito.sceneSprites[unitName] = [tOne,tTwo]
+	if inp.buttonAddPath != "":
+		papito.addButton(inp.buttonAddPath)
+	if inp.dictKey != "":
+		papito.textReplacementBuffer[inp.dictKey] = inp.dictArr
+	print(inp.recursiveEvent)
+	if inp.recursiveEvent != null:
+		executeEvenctFunctions(inp.recursiveEvent)
+	
+
 func checkForEvent(currentTime):
 	if papito.eventIndexes[unitName] < myEvents.contents.size():
 		if myEvents.contents[papito.eventIndexes[unitName]].time == currentTime:
-			if myEvents.contents[papito.eventIndexes[unitName]].dialogueText.keys().size() > 0:
-				var painTemp = myEvents.contents[papito.eventIndexes[unitName]] as event
-				papito._print(painTemp.dialogueText,painTemp.dialogueVoice,painTemp.dialogueDelay,painTemp.dialogueFont)
-				await papito.stoppedPrinting
-			if myEvents.contents[papito.eventIndexes[unitName]].replacingSprites.size() > 0:
-				tOne = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[0]
-				tTwo = myEvents.contents[papito.eventIndexes[unitName]].replacingSprites[1]
-				papito.sceneSprites[unitName] = [tOne,tTwo]
-			if myEvents.contents[papito.eventIndexes[unitName]].buttonAddPath != "":
-				papito.addButton(myEvents.contents[papito.eventIndexes[unitName]].buttonAddPath)
-			if myEvents.contents[papito.eventIndexes[unitName]].dictKey != "":
-				papito.textReplacementBuffer[myEvents.contents[papito.eventIndexes[unitName]].dictKey] = myEvents.contents[papito.eventIndexes[unitName]].dictArr
+			executeEvenctFunctions(myEvents.contents[papito.eventIndexes[unitName]])
 			papito.eventIndexes[unitName] += 1

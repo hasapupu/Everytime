@@ -12,7 +12,7 @@ texture = ExtResource("1_5xshy")
 script = ExtResource("2_g1jr6")
 tOne = ExtResource("1_5xshy")
 tTwo = ExtResource("3_gb1v3")
-unitName = "planetView"
+unitName = "islandScene"
 
 [node name="clock" parent="." instance=ExtResource("4_ghmwe")]
 
