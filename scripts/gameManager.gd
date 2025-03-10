@@ -11,7 +11,6 @@ var mainTextbox: RichTextLabel
 signal squiggle
 var plUINode: Node2D
 @onready var mainTime: clockCustom = get_node("clock")
-var events := []
 var eventIndexes = {"main":0}
 var currentRoomName := ""
 var buttons := []

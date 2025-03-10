@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://csxo8iqo0qft0"]
+[gd_scene load_steps=6 format=3 uid="uid://csxo8iqo0qft0"]
 
 [ext_resource type="Texture2D" uid="uid://myqe4ox7lgst" path="res://backgrounds/iceLand1.png" id="1_6v4fj"]
 [ext_resource type="Script" path="res://nodes/monkScene.gd" id="2_7q4o1"]
 [ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="3_a52ng"]
+[ext_resource type="Texture2D" uid="uid://yce12vsgwhq1" path="res://backgrounds/iceLand2.png" id="3_apwes"]
 [ext_resource type="Script" path="res://nodes/arcticEvents.gd" id="5_ikk7j"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(240, 135)
 texture = ExtResource("1_6v4fj")
 script = ExtResource("2_7q4o1")
+tOne = ExtResource("3_apwes")
+tTwo = ExtResource("1_6v4fj")
 unitName = "monkScene"
 
 [node name="clock" parent="." instance=ExtResource("3_a52ng")]

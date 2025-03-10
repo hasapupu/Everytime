@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/backGroundSprite.gd" id="2_g1jr6"]
 [ext_resource type="Texture2D" uid="uid://c1snwjrh0v751" path="res://backgrounds/islands2.png" id="3_gb1v3"]
 [ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="4_ghmwe"]
-[ext_resource type="Script" path="res://scripts/events.gd" id="5_xq6w1"]
+[ext_resource type="Script" path="res://nodes/islandEvents.gd" id="5_ierjx"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(240, 135)
@@ -17,4 +17,4 @@ unitName = "islandScene"
 [node name="clock" parent="." instance=ExtResource("4_ghmwe")]
 
 [node name="events" type="Node" parent="."]
-script = ExtResource("5_xq6w1")
+script = ExtResource("5_ierjx")

@@ -17,4 +17,56 @@ func _ready():
                     event.new(70,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[],"","islandScene",[
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandFewPeople1.png"),load("res://backgrounds/islandFewPeople2.png")],"")
                     ]),
-                ])])])]
+                    event.new(120,{}, null, 0, null, [], "", "monkScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/arcticAlottaPeople1.png"),load("res://backgrounds/arcticAlottaPeople2.png")],"")                ])
+                    ]),
+                    event.new(165,{}, null, 0, null, [], "", "monkScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/arcticChuddha1.png"),load("res://backgrounds/arcticChuddha2.png")],"")
+                    ]),
+                    event.new(180,{}, null, 0, null, [], "", "islandScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandAlottaPeople1.png"),load("res://backgrounds/islandAlottPeople2.png")],"")
+                    ]),
+                    event.new(190,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertAlottaPeople1.png"),load("res://backgrounds/desertAlottaPeople2.png")],"")
+                    ]),
+                    event.new(220,{}, null, 0, null, [], "", "islandScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandSomeShips1.png"),load("res://backgrounds/islandSomeShips2.png")],"")
+                    ]),
+                    event.new(230,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertSeparationFewPeople1.png"),load("res://backgrounds/desertSeparationFewPeople2.png")],"")
+                    ]),
+                    event.new(250,{}, null, 0, null, [], "", "islandScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandAlottaShips1.png"),load("res://backgrounds/islandAlottaShips2.png")],"")
+                    ]),
+                    event.new(270,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertSeparationAlottaPeople1.png"),load("res://backgrounds/desertSepaprationAlottaPeople2.png")],"")
+                    ]),
+                    event.new(300,{}, null, 0, null, [], "", "islandScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandGeneralFirstEver1.png"),load("res://backgrounds/islandGeneralFirstEver2.png")],"")
+                    ]),
+                    event.new(310,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertSeparationAlottaPeopleWeapons1.png"),load("res://backgrounds/desertSeparationAlottaPeopleWeapons2.png")],"")
+                    ]),
+                    event.new(340,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertBattleNoDeath1.png"),load("res://backgrounds/desertBattleNoDeath2.png")],"")
+                    ]),
+                    event.new(380,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertBattleFewDeath1.png"),load("res://backgrounds/desertBattleFewDeath2.png")],"")
+                    ]),
+                    event.new(415,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertBattleMoreDeath1.png"),load("res://backgrounds/desertBattleMoreDeath2.png")],"")
+                    ]),
+                    event.new(455,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertBattleAllDeath1.png"),load("res://backgrounds/desertBattleAllDeath2.png")],"")
+                    ]),
+                    event.new(485,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertAlGaib1.png"),load("res://backgrounds/desertAlGaib2.png")],"")
+                    ]),
+                    event.new(515,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertPyramidwip1.png"),load("res://backgrounds/desertPyramidwip2.png")],"")
+                    ]),
+                    event.new(555,{}, null, 0, null, [], "", "egyptScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertPyramidFin1.png"),load("res://backgrounds/desertPyramidFin2.png")],"")
+                    ]),
+
+      ])])]
