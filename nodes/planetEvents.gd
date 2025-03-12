@@ -68,5 +68,7 @@ func _ready():
                     event.new(555,{}, null, 0, null, [], "", "egyptScene", [
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertPyramidFin1.png"),load("res://backgrounds/desertPyramidFin2.png")],"")
                     ]),
-
+                    event.new(556,{}, null, 0, null, [], "", "islandScene", [
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandHuffPuff1.png"),load("res://backgrounds/islandHuffPuff2.png")],"","",[],event.new(0,{"Phew,huhh,huhh" : 0.5,"GENERAL, GENERAL!":0.5,"THE GREAT FAR ISLAND!":0.5,"ITS AS IF A NEW MOUNTAIN HAS GROWN OUT THERE!":0.5},load("res://sfx/sVoice.wav"),0.05,load("res://fonts/MARYJSC_.ttf"),[],"","",[],event.new(0,{"Huh, interesting...":1,"NOTIFY THE MEN AND PREPARE MY SHIP!":1.3,"We are exploring unknown territory!":2}, load("gVoice"), 0.07, load("res://fonts/MJALTER_.ttf"),[],"")))
+                    ]),
       ])])]
