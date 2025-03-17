@@ -72,6 +72,34 @@ func _ready():
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandHuffPuff1.png"),load("res://backgrounds/islandHuffPuff2.png")],"","",[],event.new(0,{"Phew,huhh,huhh" : 0.5,"GENERAL, GENERAL!":0.5,"THE GREAT FAR ISLAND!":0.5,"ITS AS IF A NEW MOUNTAIN HAS GROWN OUT THERE!":0.5},load("res://sfx/sVoice.wav"),0.05,load("res://fonts/MARYJSC_.ttf"),[],"","",[],event.new(0,{"Huh, interesting...":1,"NOTIFY THE MEN AND PREPARE MY SHIP!":1.3,"We are exploring unknown territory!":2}, load("gVoice"), 0.07, load("res://fonts/MJALTER_.ttf"),[load("res://backgrounds/islandEmptyChair1.png"),load("res://backgrounds/islandEmptyChair2.png")],"")))
                     ]),
                     event.new(560,{}, null, 0, null, [], "", "hubScene", [
-                        event.new(0,{"Hey...":2,"I'm sorry.":1,"One time I'm mad at you for going away in the past,":1,"The next I'm yelling at you staying.":1.5,"What's wrong with me?":1.5},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yShy1.png"),load("res://backgrounds/yShy2.png")],"","",[],event.new(0,{"How about we start over?":.5,"I'll try to forget the past,":1,"just...":0.5,"DON'T LEAVE ME, OK?":2,"...":2},load("res://sfx/yVoice.wav"),0.05,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yBlush1.png"),load("res://backgrounds/yBlush2.png")],"","",[],event.new(0,{"So, howdya like the planet?":1,"Wanna show me around?":1.3},load("res://sfx/yVoice.wav"), 0.07, load("res://fonts/MARYJO__.ttf"),[],"")))
+                        event.new(0,{"Hey...":2,"I'm sorry.":1,"One time I'm mad at you for going away in the past,":1,"The next I'm yelling at you staying.":1.5,"What's wrong with me?":1.5},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yShy1.png"),load("res://backgrounds/yShy2.png")],"","",[],event.new(0,{"How about we start over?":.5,"I'll try to forget the past,":1,"just...":0.5,"DON'T LEAVE ME, OK?":2,"...":2},load("res://sfx/yVoice.wav"),0.05,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yBlush1.png"),load("res://backgrounds/yBlush2.png")],"","",[],event.new(0,{"So, howdya like the planet?":1,"Wanna show me around?":1.3},load("res://sfx/yVoice.wav"), 0.07, load("res://fonts/MARYJO__.ttf"),[],"","monkScene",[
+                            event.new(0, {"Wow":1,"The creatures here are already tapping into the techniques I used to make their planet.":2,"I wonder when they will realise that we exist,":1.5,"and how it'll affect them.":1.5}, load("res://sfx/yVoice.wav"), 0.07, load("res://fonts/MARYJO__.ttf"),[],"",)
+
+                        ]))),
+                        event.new(1,{},null,0,null,[],"","islandScene", [
+                            event.new(0,{"You know, I'm actually kinda proud of how this biome turned out.":1.5,"Isn't it beautiful?":1,"I'm not surprised the creatures here discovered sailing so fast.":1,"Who wouldn't want to explore these islands?":1},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"),[],"",)
+                        ]),
+                        event.new(2,{},null,0,null,[],"","egyptScene",[
+                            event.new(0,{}, null,0,null,[load("res://backgrounds/desertDiplomacy1.png"),load("res://backgrounds/desertDiplomacy1.png")],"","",[],
+                                event.new(0,{"So yeah, that's pretty much what our empire is like.":2},load("res://sfx/gVoice.wav"),0.08,load("res://fonts/MJALTER_.ttf"),[],"","",[],
+                                    event.new(0,{"You insolent fool.":1.5,"You come here,":1,"Disturb our peace,":1,"demand to see face to face with the leader,":1.5,"all the while referring to yourself as guests,":1.5,"JUST FOR MEANINGLESS CHATTER!?":2,"Do you people have no concept of disrespect?":1,"If you ever want to see your homes again,":1.3,"LEAVE!":1},load("res://sfx/bVoice.wav"),0.06,load("res://fonts/MARYJWI_.ttf"),[],"","",[],
+                                        event.new(0,{"G-General...":2,"I--I don't think he's k-kidding.":2.2,"LET'S GET OUTTA HERE!":1},load("res://sfx/sVoice.wav"), 0.09,load("res://fonts/MARYJSC_.ttf"),[load("res://backgrounds/desertPyramidFin1.png"),load("res://backgrounds/desertPyramidFin2.png")],"","",[],
+                                            event.new(0,{"What...":1,"No...":1},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"),[],"","hubScene",[
+                                                event.new(0,{},null,0,null,[load("res://backgrounds/yDepression1.png"),"res://backgrounds/yDepression2.png"],"","",[],
+                                                    event.new(0,{"Why...":1,"Why does everything I create end in either":1,"conflict,":0.5,"war":0.5,"Or even inexplicable bloodshed...":2,"Up until now, I thought it was inherent due to them":0.3,"existing on a lower plane of reality.":1.5,"But now I'm starting to wonder,":1,"maybe it originates from MY very nature?":2,"I mean our coexistance devolved into conflict so much, it's impossible to count.":1.5,"And if it were possible, I'm sure we'd have killed eachother.":1.5,"Well, I'd have for sure...":1},load("res://sfx/yVoice.wav"),0.08,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yShy1.png"),load("res://backgrounds/yShy2.png")],"","",[],
+                                                        event.new(0,{"But now, FINALLY":0.5,"I don't feel that way.":1,"And I don't want to ever again!":2},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yBlush1.png"),load("res://backgrounds/yBlush2.png")],"","",[],
+                                                            event.new(0,{"So maybe now, that I'm feeling better,":1,"they will start acting more humane too.":1.3},load("res://sfx/yVoice.wav"),0.07,load("res://fonts/MARYJO__.ttf"),[],"")
+                                                        )
+                                                    )
+                                                )
+                                            ]#,
+                                            #event.new()
+                                        )
+                                        )
+                                    )
+                                )
+                            )
+                        ])
                     ]),
+                  
       ])])]
