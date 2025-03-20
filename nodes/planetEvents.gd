@@ -92,8 +92,22 @@ func _ready():
                                                         )
                                                     )
                                                 )
-                                            ]#,
-                                            #event.new()
+                                            ],
+                                            event.new(0,{},null,0,null,[],"","islandScene",[
+                                                event.new(0,{},null,0,null,[load("res://backgrounds/islandGeneralDiscussion1.png"),load("res://backgrounds/islandGeneralDiscussion2.png")],"","",[],
+                                                    event.new(0,{"When do you plan to attack, general?":1,"It takes you but one word and I'll have the entire fleet prepared for battle...":1.5,"In just a week!":1},load("res://sfx/sVoice.wav"),0.06,load("res://fonts/MARYJSC_.ttf"),[],"","",[],
+                                                        event.new(0,{"...":2,"No need for that.":1.5},load("res://sfx/gVoice.wav"),0.09,load("res://fonts/MJALTER_.ttf"),[],"","",[],
+                                                            event.new(0,{"WHAT":1,"MY GENERAL, WHAT ARE YOU SAYING?":1.3,"AFTER THEY HUMILIATED YOU ON THE VERY DAY OF YOUR ARRIVAL?!":1.3},load("res://sfx/sVoice.wav"),0.06,load("res://fonts/MARYJSC_.ttf"),[],"","",[],
+                                                                event.new(0,{"And why do you think that is?":1.5,"I mean, why COULD they do that?":1.3,"I'll tell ya why.":1.3,"Those... creatures.":1,"They are like rats in your ship's kitchen.":1.3,"One of them is just a hungry, barbaric little creature.":1.3,"But once they get breedin'... oh boy.":0.7,"There'll be so much of them, extermination becomes nearly impossible.":1.7,"If we tried to attack them now, we'd be gone like ship's cheese.":2,"That's why our only hope of victory is our superior intellect.":1.2,"If we want to win against vermin, we need to moke some mousetraps.":2,"Capiche?":1},load("res://sfx/gVoice.wav"),0.08,load("res://fonts/MJALTER_.ttf"),[],"","",[],
+                                                                    event.new(0,{"Y-Yessir!":0.5,"We'll start gathering potential inventors to the navy's weaponry division right away!":2},load("res://sfx/sVoice.wav"),0.06,load("res://fonts/MARYJSC_.ttf"),[],"","",[],
+                                                                        event.new(0,{"Good.":0.5,"Tell 'em to work as fast as possible.":1,"Right now our only protection from them is the sea.":1.5,"And who knows how fast the rats will learn how to swim.":2},load("res://sfx/gVoice.wav"),0.07,load("res://fonts/MJALTER_.ttf"),[],"")
+                                                                    )
+                                                                )
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            ])
                                         )
                                         )
                                     )
