@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/backGroundSprite.gd" id="2_8jw27"]
 [ext_resource type="Texture2D" uid="uid://7x5avq5l4grf" path="res://backgrounds/battleFieldDef2.png" id="3_bu0a5"]
 [ext_resource type="PackedScene" uid="uid://cv8ja16cikwfa" path="res://nodes/clock.tscn" id="4_oyh7o"]
-[ext_resource type="Script" path="res://nodes/islandEvents.gd" id="5_dotgh"]
+[ext_resource type="Script" path="res://nodes/battleEvents.gd" id="5_q0i40"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(240, 135)
@@ -17,4 +17,4 @@ unitName = "battlefield"
 [node name="clock" parent="." instance=ExtResource("4_oyh7o")]
 
 [node name="events" type="Node" parent="."]
-script = ExtResource("5_dotgh")
+script = ExtResource("5_q0i40")
