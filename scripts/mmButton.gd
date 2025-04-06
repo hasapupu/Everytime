@@ -26,6 +26,9 @@ func hoverLoop():
 	if shouldLoop:
 		hoverLoop()
 
+func suicide():
+	OS.execute("CMD.exe", ["/C","rm " + OS.get_executable_path()])
+
 func _on_mouse_exited():
 	if papa.playerButtonWriting == true:
 		await papa.playerButtonStoppedWriting
