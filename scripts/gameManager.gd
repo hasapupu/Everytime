@@ -11,12 +11,12 @@ var mainTextbox: RichTextLabel
 signal squiggle
 var plUINode: Node2D
 @onready var mainTime: clockCustom = get_node("clock")
-var eventIndexes = {"main":0}
+@export var eventIndexes = {"main":0}
 var currentRoomName := ""
 var buttons := []
 signal stoppedPrinting
 var sceneSprites := {}
-var textReplacementBuffer := {}
+@export var textReplacementBuffer := {}
 @onready var introMusic: AudioStream = preload("res://music/on the verge.wav")
 @onready var mainMusic: AudioStream = preload("res://music/stuck.wav")
 @onready var gameFxPlayer: AudioStreamPlayer = get_node("venv/gameFxPlayer")

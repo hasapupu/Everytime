@@ -18,13 +18,13 @@ func _ready():
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandFewPeople1.png"),load("res://backgrounds/islandFewPeople2.png")],"")
                     ]),
                     event.new(120,{}, null, 0, null, [], "", "monkScene", [
-                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/arcticAlottaPeople1.png"),load("res://backgrounds/arcticAlottaPeople2.png")],"")                ])
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/arcticAlottaPeople1.png"),load("res://backgrounds/arcticAlottaPeople2.png")],"")                
                     ]),
                     event.new(165,{}, null, 0, null, [], "", "monkScene", [
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/arcticChuddha1.png"),load("res://backgrounds/arcticChuddha2.png")],"")
                     ]),
                     event.new(180,{}, null, 0, null, [], "", "islandScene", [
-                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandAlottaPeople1.png"),load("res://backgrounds/islandAlottPeople2.png")],"")
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandAlottaPeople1.png"),load("res://backgrounds/islandAlottaPeople2.png")],"")
                     ]),
                     event.new(190,{}, null, 0, null, [], "", "egyptScene", [
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertAlottaPeople1.png"),load("res://backgrounds/desertAlottaPeople2.png")],"")
@@ -36,10 +36,10 @@ func _ready():
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertSeparationFewPeople1.png"),load("res://backgrounds/desertSeparationFewPeople2.png")],"")
                     ]),
                     event.new(250,{}, null, 0, null, [], "", "islandScene", [
-                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandAlottaShips1.png"),load("res://backgrounds/islandAlottaShips2.png")],"")
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandLottaShips1.png"),load("res://backgrounds/islandLottaShips2.png")],"")
                     ]),
                     event.new(270,{}, null, 0, null, [], "", "egyptScene", [
-                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertSeparationAlottaPeople1.png"),load("res://backgrounds/desertSepaprationAlottaPeople2.png")],"")
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertSeparationAlottaPeople1.png"),load("res://backgrounds/desertSeparationAlottaPeople2.png")],"")
                     ]),
                     event.new(300,{}, null, 0, null, [], "", "islandScene", [
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandGeneralFirstEver1.png"),load("res://backgrounds/islandGeneralFirstEver2.png")],"")
@@ -69,7 +69,7 @@ func _ready():
                         event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/desertPyramidFin1.png"),load("res://backgrounds/desertPyramidFin2.png")],"")
                     ]),
                     event.new(556,{}, null, 0, null, [], "", "islandScene", [
-                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandHuffPuff1.png"),load("res://backgrounds/islandHuffPuff2.png")],"","",[],event.new(0,{"Phew,huhh,huhh" : 0.5,"GENERAL, GENERAL!":0.5,"THE GREAT FAR ISLAND!":0.5,"ITS AS IF A NEW MOUNTAIN HAS GROWN OUT THERE!":0.5},load("res://sfx/sVoice.wav"),0.05,load("res://fonts/MARYJSC_.ttf"),[],"","",[],event.new(0,{"Huh, interesting...":1,"NOTIFY THE MEN AND PREPARE MY SHIP!":1.3,"We are exploring unknown territory!":2}, load("gVoice"), 0.07, load("res://fonts/MJALTER_.ttf"),[load("res://backgrounds/islandEmptyChair1.png"),load("res://backgrounds/islandEmptyChair2.png")],"")))
+                        event.new(0,{},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/islandHuffPuff1.png"),load("res://backgrounds/islandHuffPuff2.png")],"","",[],event.new(0,{"Phew,huhh,huhh" : 0.5,"GENERAL, GENERAL!":0.5,"THE GREAT FAR ISLAND!":0.5,"ITS AS IF A NEW MOUNTAIN HAS GROWN OUT THERE!":0.5},load("res://sfx/sVoice.wav"),0.05,load("res://fonts/MARYJSC_.ttf"),[],"","",[],event.new(0,{"Huh, interesting...":1,"NOTIFY THE MEN AND PREPARE MY SHIP!":1.3,"We are exploring unknown territory!":2}, load("res://sfx/gVoice.wav"), 0.07, load("res://fonts/MJALTER_.ttf"),[load("res://backgrounds/islandEmptyChair1.png"),load("res://backgrounds/islandEmptyChair2.png")],"")))
                     ]),
                     event.new(560,{}, null, 0, null, [], "", "hubScene", [
                         event.new(0,{"Hey...":2,"I'm sorry.":1,"One time I'm mad at you for going away in the past,":1,"The next I'm yelling at you staying.":1.5,"What's wrong with me?":1.5},load("res://sfx/yVoice.wav"),0.09,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yShy1.png"),load("res://backgrounds/yShy2.png")],"","",[],event.new(0,{"How about we start over?":.5,"I'll try to forget the past,":1,"just...":0.5,"DON'T LEAVE ME, OK?":2,"...":2},load("res://sfx/yVoice.wav"),0.05,load("res://fonts/MARYJO__.ttf"),[load("res://backgrounds/yBlush1.png"),load("res://backgrounds/yBlush2.png")],"","",[],event.new(0,{"So, howdya like the planet?":1,"Wanna show me around?":1.3},load("res://sfx/yVoice.wav"), 0.07, load("res://fonts/MARYJO__.ttf"),[],"","monkScene",[
@@ -111,7 +111,7 @@ func _ready():
                                                                                          event.new(70,{"Hey,gramps.":1.5,"Things aren't looking good for us...":1.3,"Despite spies reporting clear sightings of boats on their shores,":1,"People are starting to protest against your priotization of military power.":2,"They're saying that we are spending too much on the fleet.":1.4,"THOSE UNGRATEFUL FOOLS!!!":1,"Don't they realize that the enemy could attack at any second?":2,"No matter, they'll never convince me!":1.5,"I know you were right,gramps!":1},load("res://sfx/gVoice.wav"),0.07, load("res://fonts/gFont.ttf"),[],"","egyptScene",[
                                                                                              event.new(0,{"Today is a special day, my people!":1,"We have finally finished the first batch of the strange contraptions the foreign have used to come here!":2,"I know this has been quite the controversial undertaking...":1,"Especially opposed by my late fathers compatriots.":1.5,"To you, I just have one thing to say.":1.5,"I understand your distrust.":1.5,"I mean,how could you not be distrustful?":1,"You ARE from an era of war, after all...":1.5,"But you also have to understand,":1,"A new age is coming!":0.5,"AN AGE OF PEACE!":2},load("res://sfx/bVoice.wav"),0.07,load("res://fonts/bFont.ttf"),[],"","",[],
                                                                                                 event.new(0,{"WOOOOOOOOOOOOO!!!!!!!":2},load("res://sfx/sVoice.wav"),0.07,load("res://fonts/sFont.ttf"),[],"","",[],
-                                                                                                    event.new(0,{"And as a beginning of this new era,":1,"I have sent the first contraption on its way...":1,"WITH A WHOLE DIPLOMATIC TEAM ON BOARD,":1.5,"STRAIGHT INTO THE FOREIGNERS LAND!":2,"If things go well, they should receive word of them any second now!!!!!!":2},load("bVoice"),0.06,load("res://fonts/bFont.ttf"),[],"","",[],
+                                                                                                    event.new(0,{"And as a beginning of this new era,":1,"I have sent the first contraption on its way...":1,"WITH A WHOLE DIPLOMATIC TEAM ON BOARD,":1.5,"STRAIGHT INTO THE FOREIGNERS LAND!":2,"If things go well, they should receive word of them any second now!!!!!!":2},load("res://sfx/bVoice.wav"),0.06,load("res://fonts/bFont.ttf"),[],"","",[],
                                                                                                         event.new(0,{"YEEEEEEEESSSSSS!!!!!":1,"BABEL! BABEL! BABEL!":2,"YOU'RE THE BEST,BABEL!!!!!!":2},load("res://sfx/sVoice.wav"),0.08,load("res://fonts/sFont.ttf"),[],"battleScene","",[])
                                                                                                     )
                                                                                                 )

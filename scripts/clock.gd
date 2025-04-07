@@ -11,6 +11,7 @@ func calcUp():
 	await get_tree().create_timer(1).timeout
 	time += 1
 	tick.emit(time)
+	print(time)
 	calcUp()
 
 func reset():
